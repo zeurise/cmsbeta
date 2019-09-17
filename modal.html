@@ -1,0 +1,120 @@
+<!-- Edit -->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <center><h4 class="modal-title" id="myModalLabel">Módosítás</h4></center>
+            </div>
+            <div class="modal-body">
+			<div class="container-fluid">
+			<form id="editForm">
+				<input type="hidden" class="id" name="id">
+				<center><b>Szerviz munkalap</b></center>
+				<hr>
+
+				<div class="row form-group well">
+					<div class="col-md-6">
+						<label class="control-label" style="position:relative; top:7px;">Munkalapszám</label>
+					</div>
+					<div class="col-md-6">
+						<input type="number" class="form-control munkalap_id" name="munkalap_id">
+					</div>
+					<div class="col-md-6">
+						<label class="control-label" style="position:relative; top:7px;">Készülék</label>
+					</div>
+					<div class="col-md-6">
+						<input type="text" class="form-control keszulek" name="keszulek">
+					</div>
+				</div>
+				<div class="row form-group well">
+					<div class="col-sm-2"><label  class="control-label" style="position:relative; top:7px;" for="statusz">Státusz</label></div>
+							<div class="col-sm-10">
+						<select class="form-control statusz" name="statusz">
+					<option value="1">Kiadva szervizből</option>
+					<option value="2">Megoldando tétel</option>
+					<option value="3">Visszaadva szervizbe</option>
+					<option value="4">Módosítva</option>
+					<option value="5">Szervizbe [Üzletből]</option>
+					<option value="6">Zárolva</option>
+
+					</select>		
+				</div>
+ 				</div>
+				
+				<div class="row form-group well">
+
+				<hr>
+				<center><b>Szerviz müveltek</b></center>
+				<div class="form-group">
+					<input class="form-control tetel_1" type="text" name="tetel_1"/>
+					<input class="form-control tetel_2" type="text" name="tetel_2"/>
+					<input class="form-control tetel_3" type="text" name="tetel_3"/>
+					<input class="form-control tetel_4" type="text" name="tetel_4"/>
+					<input class="form-control tetel_5" type="text" name="tetel_5"/>
+					<input class="form-control tetel_6" type="text" name="tetel_6"/>
+					<input class="form-control tetel_7" type="text" name="tetel_7"/>
+					<input class="form-control tetel_8" type="text" name="tetel_8"/>
+					<input class="form-control tetel_9" type="text" name="tetel_9"/>
+					<input class="form-control tetel_10" type="text" name="tetel_10"/>
+				</div>
+				</div>
+
+				<div class="row form-group well">
+					<div class="col-md-6">
+				<textarea  class="form-control szervizinfo"  name="szervizinfo" cols="10" rows="2" id="szervizinfo"></textarea>
+					</div>
+				</div>
+				
+				
+				
+				<div class="row form-group well">
+					<div class="col-md-6">
+				<textarea  class="form-control ugyintezoinfo" name="ugyintezoinfo" cols="10" rows="2" id="ugyintezoinfo"></textarea>
+				</div>
+				</div>
+				<div class="row form-group well">
+				<label>Beküldő</label>
+				<input class="form-control felhasznalo" type="text" name="felhasznalo" readonly>
+				</div>
+				
+				<div class="row form-group well">
+				<label>Üzlet</label>
+				<?php echo get_uzlet(1); ?>
+				</div>
+				
+            </div> 
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Kilépés</button>
+                <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> Módosítás</a>
+			 </div>
+			 
+			
+			 
+			</form>
+           
+
+        </div>
+    </div>
+</div>
+
+<!-- Delete -->
+<div class="modal fade" id="locker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <center><h4 class="modal-title" id="myModalLabel">Tétel zárolása</h4></center>
+            </div>
+            <div class="modal-body">	
+            	<p class="text-center">Biztos vagy benne, hogy zárolni akarod?</p>
+			</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Nem</button>
+                <button type="button" class="btn btn-danger id"><span class="glyphicon glyphicon-trash"></span> Igen</button>
+            </div>
+
+        </div>
+    </div>
+</div>
